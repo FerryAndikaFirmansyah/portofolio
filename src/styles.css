@@ -1,0 +1,275 @@
+:root {
+    --bg: #061022;
+    --card: #071426;
+    --neon: #3AF4FF;
+    /* cyan neon */
+    --accent: #FF6BFF;
+    /* pink neon */
+}
+
+body {
+    background: radial-gradient(ellipse at top left, #04101a 0%, #021018 40%, #011217 100%);
+    color: #E6EEF6;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.app-root {
+    padding-top: 72px
+}
+
+.navbar-neon {
+    background: rgba(5, 6, 12, 0.6);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5)
+}
+
+.brand .neon {
+    color: var(--neon);
+    text-shadow: 0 0 8px rgba(58, 244, 255, 0.25)
+}
+
+.muted {
+    color: rgba(230, 238, 246, 0.65)
+}
+
+.hero-section {
+    padding: 64px 0
+}
+
+.hero-section .display-5 {
+    font-weight: 700
+}
+
+.neon {
+    color: var(--neon);
+    text-shadow: 0 0 12px rgba(58, 244, 255, 0.18)
+}
+
+.typewriter {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace
+}
+
+.cursor {
+    opacity: 0.9
+}
+
+.btn-neon {
+    background: linear-gradient(90deg, var(--neon), var(--accent));
+    border: none;
+    color: #021217
+}
+
+.btn-neon-outline {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #E6EEF6
+}
+
+.project-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+    border: none
+}
+
+.skill-badge {
+    background: rgba(255, 255, 255, 0.06);
+    color: #e6eef6
+}
+
+
+
+
+/* Lanyard 3D card styles */
+.lanyard-wrap {
+    width: 240px;
+    perspective: 1200px;
+    cursor: pointer;
+}
+
+.lanyard-strap {
+    width: 12px;
+    height: 90px;
+    background: linear-gradient(180deg, #111, #0b2430);
+    position: relative;
+    left: 116px;
+    top: -14px;
+    border-radius: 6px
+}
+
+.lanyard-card {
+    width: 240px;
+    height: 320px;
+    border-radius: 12px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.9s cubic-bezier(.2, .9, .3, 1);
+    box-shadow: 0 12px 40px rgba(4, 6, 12, 0.7);
+}
+
+.lanyard-card .lanyard-front,
+.lanyard-card .lanyard-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    border-radius: 12px
+}
+
+.lanyard-card .lanyard-front {
+    background: linear-gradient(180deg, rgba(58, 244, 255, 0.06), rgba(255, 107, 255, 0.02));
+}
+
+.lanyard-card .lanyard-back {
+    background: linear-gradient(180deg, rgba(2, 6, 23, 0.7), rgba(0, 0, 0, 0.6));
+    transform: rotateY(180deg)
+}
+
+.lanyard-wrap.flipped .lanyard-card {
+    transform: rotateY(180deg)
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.06)
+}
+
+
+/* hover and small niceties */
+.project-card:hover {
+    transform: translateY(-6px);
+    transition: all .25s ease
+}
+
+
+@media(max-width:768px) {
+    .lanyard-wrap {
+        width: 200px
+    }
+}
+
+.about-section {
+    color: #fff;
+    background: #0a0a0a;
+    min-height: 80vh;
+}
+
+
+.neon-title {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #d1d1d1;
+}
+
+
+.lanyard-card {
+    perspective: 1000px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.lanyard-frame {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #00ffff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #00ffff;
+    background: rgba(0, 0, 0, 0.3);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+
+.lanyard-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+
+.lanyard-string {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 25px;
+    background: linear-gradient(180deg, #00ffff, transparent);
+    box-shadow: 0 0 8px #00ffff;
+    border-radius: 2px;
+}
+
+/* skills */
+.skills-section {
+    background: radial-gradient(circle at center, #0f172a, #020617);
+    color: #fff;
+}
+
+.neon-text {
+    color: #00ffff;
+    text-shadow: 0 0 8px #00ffff, 0 0 16px #00ffff;
+}
+
+/* === Grid Layout === */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+}
+
+/* === Skill Card === */
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 14px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    background: rgba(0, 255, 255, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    margin-top: 6px;
+}
+
+/* Responsif */
+@media (max-width: 992px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
