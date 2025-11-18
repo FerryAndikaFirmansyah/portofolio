@@ -4,9 +4,9 @@ import { Button, Card, Col, Row } from 'react-bootstrap';
 
 
 const projects = [
-    { title: 'Inventory Web With Sequelize Postgree', desc: 'Web Inventory menggunakan Sequelize, Postgree, Nodejs', link: '#' },
-    { title: 'Interactive Portfolio (React)', desc: 'Portfolio interaktif dengan dark mode dan animasi', link: '#' },
-    { title: 'Sistem Penilaian Siswa', desc: 'Aplikasi pengelolaan nilai siswa dengan hak akses guru/admin', link: '#' }
+    { title: 'Pet Shop Zaman Now', desc: 'Aplikasi Petshop dengan React, Postgree, Nodejs', link: 'https://petshopzn-fe.vercel.app/' },
+    { title: 'Interactive Portfolio (React + NextJS)', desc: 'Portfolio interaktif dengan dark mode dan animasi', link: 'https://ferryandikafirmansyah.github.io/portofolio/' },
+    { title: 'Santeen POS', desc: 'Aplikasi pos kasir sederhana', link: 'https://github.com/FerryAndikaFirmansyah/pos-kasir' }
 ];
 
 
